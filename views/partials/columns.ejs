@@ -1,0 +1,98 @@
+<! — views/partials/columns.ejs →
+<section name=”content”>
+ <div class=”container”>
+ <h2 class=”text-center”>Sample Data</h2>
+ <div class=”col-xs-12 col-md-4">
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget iaculis lorem. Fusce elementum magna fringilla ipsum bibendum, vitae consectetur ligula interdum. Sed mauris diam, hendrerit eget suscipit vel, luctus at odio. Etiam pellentesque a metus et pharetra. Praesent dictum, libero id tempor malesuada, erat ex cursus nibh, ac hendrerit massa neque commodo metus. Integer porttitor ante eu varius interdum. Suspendisse quis iaculis erat. Fusce eu nisl id eros tempor posuere. Donec placerat orci orci, ut ultrices neque rutrum in. Nunc dignissim ante et risus rhoncus, vel feugiat mi vestibulum. Aliquam in dictum neque, non vestibulum lorem. Sed imperdiet dolor vitae felis iaculis, id sollicitudin lectus rhoncus. Maecenas ac dolor eget tortor rutrum commodo. Aliquam luctus iaculis mi id semper. Suspendisse sem nisi, convallis at dapibus in, convallis eu neque. Curabitur maximus magna et nulla ullamcorper facilisis.</p>
+ </div>
+ <div class=”col-xs-12 col-md-4">
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget iaculis lorem. Fusce elementum magna fringilla ipsum bibendum, vitae consectetur ligula interdum. Sed mauris diam, hendrerit eget suscipit vel, luctus at odio. Etiam pellentesque a metus et pharetra. Praesent dictum, libero id tempor malesuada, erat ex cursus nibh, ac hendrerit massa neque commodo metus. Integer porttitor ante eu varius interdum. Suspendisse quis iaculis erat. Fusce eu nisl id eros tempor posuere. Donec placerat orci orci, ut ultrices neque rutrum in. Nunc dignissim ante et risus rhoncus, vel feugiat mi vestibulum. Aliquam in dictum neque, non vestibulum lorem. Sed imperdiet dolor vitae felis iaculis, id sollicitudin lectus rhoncus. Maecenas ac dolor eget tortor rutrum commodo. Aliquam luctus iaculis mi id semper. Suspendisse sem nisi, convallis at dapibus in, convallis eu neque. Curabitur maximus magna et nulla ullamcorper facilisis.</p>
+ </div>
+ <div class=”col-xs-12 col-md-4">
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget iaculis lorem. Fusce elementum magna fringilla ipsum bibendum, vitae consectetur ligula interdum. Sed mauris diam, hendrerit eget suscipit vel, luctus at odio. Etiam pellentesque a metus et pharetra. Praesent dictum, libero id tempor malesuada, erat ex cursus nibh, ac hendrerit massa neque commodo metus. Integer porttitor ante eu varius interdum. Suspendisse quis iaculis erat. Fusce eu nisl id eros tempor posuere. Donec placerat orci orci, ut ultrices neque rutrum in. Nunc dignissim ante et risus rhoncus, vel feugiat mi vestibulum. Aliquam in dictum neque, non vestibulum lorem. Sed imperdiet dolor vitae felis iaculis, id sollicitudin lectus rhoncus. Maecenas ac dolor eget tortor rutrum commodo. Aliquam luctus iaculis mi id semper. Suspendisse sem nisi, convallis at dapibus in, convallis eu neque. Curabitur maximus magna et nulla ullamcorper facilisis.</p>
+ </div>
+ </div>
+</section>
+Building our Pages
+Our sample application has a homepage and an about page. We will need to create both of these pages. On these pages we will insert the appropriate partials we just created on the page.
+We put all of our partials in a folder called partials within the views folder. We are going to create another folder in the views folder called pages. This folder will contain our homepage and about pages.
+To insert a partial on a page we use this format:
+<% include ./partials/head %>
+Here are the contents of our two pages:
+index.ejs
+<!DOCTYPE html>
+<html lang=”en”>
+<% include ./partials/head %>
+<body>
+<% include ./partials/nav %>
+<section name=”jumbotron” >
+ <div class=”jumbotron text-center”>
+ <h1>CodePrep.io Presents</h1>
+ <p>Using EJS templating with Node.js</p>
+ </div>
+ </section>
+<% include ./partials/columns %>
+<% include ./partials/footer %>
+</body>
+</html>
+about.ejs
+<!DOCTYPE html>
+<html lang=”en”>
+<% include ./partials/head %>
+<body>
+<% include ./partials/nav %>
+<! — content for about page →
+ <div class=”container” id=”about”>
+ <div class=”row”>
+ <h2 class=”text-center”>About Page</h2>
+ <div class=”col-xs-12">
+ <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien eros, dictum eu malesuada sagittis, pellentesque sed enim. Donec at odio volutpat, dignissim mauris tincidunt, pharetra lorem. Fusce porta neque non lorem vulputate, et commodo dolor semper. Proin sodales lacinia nibh vel semper. Nulla sed faucibus nisi. Aliquam venenatis pellentesque tortor et fringilla. Nulla porttitor massa vitae libero volutpat, id mollis neque elementum. Integer porta, enim eu pharetra interdum, diam metus mollis purus, id ornare risus enim a magna. Sed rhoncus, nulla ac hendrerit lacinia, neque lectus iaculis ligula, et euismod erat massa sit amet orci. Ut fermentum hendrerit arcu. Vestibulum quis leo ut ante eleifend fringilla.
+Morbi maximus eu lorem sit amet tempor. Nunc dignissim lacus vel aliquet ornare. Aliquam eget turpis et nisi tincidunt rhoncus. Vestibulum interdum interdum aliquet. Phasellus quis erat est. Pellentesque molestie pretium quam in fermentum. Maecenas eu luctus turpis, euismod feugiat risus. Integer scelerisque cursus tempor. Phasellus in bibendum tortor.
+Aenean vitae lorem augue. Cras ultricies posuere vestibulum. Integer non felis porttitor mi ultricies pretium. Sed vitae nisi accumsan, maximus lorem sed, malesuada quam. Nunc lacus est, elementum vel ultrices sit amet, suscipit eu nibh. Maecenas vel facilisis leo, id congue sem. In hac habitasse platea dictumst. Aenean est lorem, hendrerit sit amet rutrum ac, sodales eget neque. Pellentesque hendrerit, risus in bibendum varius, purus tellus accumsan leo, et suscipit lorem nulla non arcu.</p>
+ </div>
+</div>
+ </div><! — end of content →
+<% include ../partials/footer %>
+<% include ../partials/scripts %>
+</body>
+</html>
+Starting our Application
+To start the application enter the following command:
+node server.js
+When our application starts it will display our homepage:
+
+homepage
+If you click on the about link in the navigation, you will see the about page:
+
+about page
+Get the code
+You can get the code for this example on github
+JavaScriptNodejsEjsWeb DevelopmentProgramming
+28
+4
+Follow
+Go to the profile of Jennifer Bland
+Jennifer Bland
+Follow
+freeCodeCamp
+freeCodeCamp
+Our community publishes stories worth reading on development, design, and data science.
+More on Web Development from freeCodeCamp
+Nobody wants to use software
+Go to the profile of Quincy Larson
+Quincy Larson
+82
+
+Also tagged Web Development
+Handoffs Guide for Pixel Perfect Design. Part II.
+Go to the profile of Vlad Kamelsky
+Vlad Kamelsky
+357
+
+Also tagged JavaScript
+Polyfills: everything you ever wanted to know, or maybe a bit less
+Go to the profile of David Gilbertson
+David Gilbertson
+46
+
+Responses

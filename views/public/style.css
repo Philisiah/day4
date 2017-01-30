@@ -1,0 +1,31 @@
+/* Styles go here */
+
+.navbar-blue {
+  border-color: #4d80b9;
+  background: rgb(99, 154, 195);
+  background: -moz-linear-gradient(top, rgba(99, 154, 195, 1) 0%, rgba(0, 58, 102, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(99, 154, 195, 1)), color-stop(100%, rgba(0, 58, 102, 1)));
+  background: -webkit-linear-gradient(top, rgba(99, 154, 195, 1) 0%, rgba(0, 58, 102, 1) 100%);
+  background: -o-linear-gradient(top, rgba(99, 154, 195, 1) 0%, rgba(0, 58, 102, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(99, 154, 195, 1) 0%, rgba(0, 58, 102, 1) 100%);
+  background: linear-gradient(to bottom, rgba(99, 154, 195, 1) 0%, rgba(0, 58, 102, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#639ac3', endColorstr='#003a66', GradientType=0);
+}
+.navbar-blue .navbar-brand {
+  color: #f1f1f1;
+}
+.navbar-blue .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-blue .navbar-nav>li>a:hover, .navbar-blue .navbar-nav>li>a:focus {
+  background-color: #4d80b9;
+}
+.navbar-blue .navbar-nav > .active > a,
+.navbar-blue .navbar-nav > .active > a:hover, 
+.navbar-blue .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #6e97c4;
+}
+.navbar-brand {
+  font-size: 24px;
+}

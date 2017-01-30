@@ -1,0 +1,21 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<% include /partials/head %>
+<body>
+ <% include /partials/nav %>
+    <section name="jumbotron">
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-lock"></span> KU Career Management System</h1>
+
+        <p>Login or Register with:</p>
+
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+        <a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google</a>
+
+    </div>
+    </section>
+    <% include /partials/footer %>
+</body>
+</html>
